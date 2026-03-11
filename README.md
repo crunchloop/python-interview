@@ -4,6 +4,19 @@
 
 This is a simple Todo List API built with FastAPI and Python 3.13+. This project is currently being used for Python full-stack candidates.
 
+## Getting Started
+
+```bash
+git clone --recurse-submodules git@github.com:crunchloop/python-interview.git
+cd python-interview
+```
+
+If you already cloned without `--recurse-submodules`, run:
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Features
 
 - **FastAPI** - Modern, fast web framework for building APIs
@@ -156,6 +169,20 @@ This project uses modern Python development tools:
 ## In-Memory Storage
 
 This application uses in-memory storage (Python lists/dicts). Data will be lost when the application restarts. This is intentional for simplicity and is suitable for interview/demo purposes.
+
+## Frontend Challenge
+
+This repo includes the [react-interview](https://github.com/crunchloop/react-interview) project as a git submodule in the `react-interview/` directory.
+
+To run the frontend:
+
+```bash
+cd react-interview
+npm install
+npm run dev
+```
+
+The React app will be available at http://localhost:5173.
 
 Check integration tests at: https://github.com/crunchloop/interview-tests
 

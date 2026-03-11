@@ -26,11 +26,14 @@
 		},
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "22"
 		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8000],
+	"forwardPorts": [8000, 5173],
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	// "runServices": [],
@@ -39,7 +42,7 @@
 	// "shutdownAction": "none",
 
 	// Install dependencies after container is created
-	"postCreateCommand": "pip install poetry && poetry install",
+	"postCreateCommand": "git submodule update --init --recursive && pip install poetry && poetry install && cd react-interview && npm install",
 
 	// Configure tool-specific properties.
 	"customizations": {
